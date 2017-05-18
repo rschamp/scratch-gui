@@ -2,7 +2,8 @@ const bindAll = require('lodash.bindall');
 const defaultsDeep = require('lodash.defaultsdeep');
 const PropTypes = require('prop-types');
 const React = require('react');
-const VMScratchBlocks = require('../lib/blocks');
+// const VMScratchBlocks = require('../lib/blocks');
+const VMScratchBlocks = require('scratch-blocks/dist/horizontal');
 const VM = require('scratch-vm');
 const Prompt = require('./prompt.jsx');
 const BlocksComponent = require('../components/blocks/blocks.jsx');
@@ -19,7 +20,7 @@ const addFunctionListener = (object, property, callback) => {
 class Blocks extends React.Component {
     constructor (props) {
         super(props);
-        this.ScratchBlocks = VMScratchBlocks(props.vm);
+        this.ScratchBlocks = VMScratchBlocks;//(props.vm);
         bindAll(this, [
             'attachVM',
             'detachVM',

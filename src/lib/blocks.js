@@ -1,4 +1,4 @@
-const ScratchBlocks = require('scratch-blocks');
+const ScratchBlocks = require('scratch-blocks/dist/horizontal');
 
 module.exports = function (vm) {
 
