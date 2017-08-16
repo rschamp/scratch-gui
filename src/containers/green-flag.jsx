@@ -16,13 +16,22 @@ class GreenFlag extends React.Component {
             'onProjectRunStart',
             'onProjectRunStop'
         ]);
-        this.state = {projectRunning: false, shiftKeyDown: false};
+        this.state = {
+            projectRunning: false,
+            shiftKeyDown: false,
+            turbo: props.vm.runtime.turboMode
+        };
     }
     componentDidMount () {
         this.props.vm.addListener('PROJECT_RUN_START', this.onProjectRunStart);
         this.props.vm.addListener('PROJECT_RUN_STOP', this.onProjectRunStop);
         document.addEventListener('keydown', this.handleKeyDown);
         document.addEventListener('keyup', this.handleKeyUp);
+    }
+    componentDidUpdate (prevProps, prevState) {
+        if (this.state.turbo !== prevState.turbo) {
+            this.props.vm.setTurboMode(this.state.turbo);
+        }
     }
     componentWillUnmount () {
         this.props.vm.removeListener('PROJECT_RUN_START', this.onProjectRunStart);
@@ -45,7 +54,7 @@ class GreenFlag extends React.Component {
     handleClick (e) {
         e.preventDefault();
         if (this.state.shiftKeyDown) {
-            this.props.vm.setTurboMode(!this.props.vm.runtime.turboMode);
+            this.setState({turbo: !this.props.vm.runtime.turboMode})
         } else {
             this.props.vm.greenFlag();
         }
@@ -58,6 +67,7 @@ class GreenFlag extends React.Component {
         return (
             <GreenFlagComponent
                 active={this.state.projectRunning}
+                turbo={this.state.turbo}
                 onClick={this.handleClick}
                 {...props}
             />
