@@ -60,6 +60,7 @@ const GUIComponent = props => {
         onActivateCostumesTab,
         onActivateSoundsTab,
         onActivateTab,
+        onSeeCommunity,
         previewInfoVisible,
         targetIsStage,
         soundsTabVisible,
@@ -112,7 +113,10 @@ const GUIComponent = props => {
             {cardsVisible ? (
                 <Cards />
             ) : null}
-            <MenuBar enableCommunity={enableCommunity} />
+            <MenuBar
+                enableCommunity={enableCommunity}
+                onSeeCommunity={onSeeCommunity}
+            />
             <Box className={styles.bodyWrapper}>
                 <Box className={styles.flexWrapper}>
                     <Box className={styles.editorWrapper}>
@@ -245,6 +249,7 @@ GUIComponent.propTypes = {
     onActivateSoundsTab: PropTypes.func,
     onActivateTab: PropTypes.func,
     onExtensionButtonClick: PropTypes.func,
+    onSeeCommunity: PropTypes.func,
     onTabSelect: PropTypes.func,
     previewInfoVisible: PropTypes.bool,
     soundsTabVisible: PropTypes.bool,

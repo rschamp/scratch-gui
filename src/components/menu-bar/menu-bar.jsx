@@ -387,8 +387,7 @@ const mapDispatchToProps = dispatch => ({
     onClickFile: () => dispatch(openFileMenu()),
     onRequestCloseFile: () => dispatch(closeFileMenu()),
     onClickEdit: () => dispatch(openEditMenu()),
-    onRequestCloseEdit: () => dispatch(closeEditMenu()),
-    onSeeCommunity: () => dispatch(setPlayer(true))
+    onRequestCloseEdit: () => dispatch(closeEditMenu())
 });
 
 export default connect(
