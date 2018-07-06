@@ -1,0 +1,44 @@
+{
+  "name": "scratch-svg-renderer",
+  "version": "0.2.0",
+  "description": "SVG renderer for Scratch",
+  "main": "./dist/node/scratch-svg-renderer.js",
+  "browser": "./src/index.js",
+  "scripts": {
+    "build": "npm run clean && webpack --progress --colors --bail",
+    "clean": "rimraf ./dist",
+    "test": "npm run test:lint",
+    "test:lint": "eslint . --ext .js",
+    "test:unit": "echo 'No unit tests yet'",
+    "test:integration": "echo 'No integration tests yet'",
+    "watch": "webpack --progress --colors --watch"
+  },
+  "author": "Massachusetts Institute of Technology",
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/LLK/scratch-svg-renderer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/LLK/scratch-svg-renderer.git"
+  },
+  "dependencies": {
+    "base64-loader": "1.0.0",
+    "jimp": "0.2.27",
+    "minilog": "3.1.0",
+    "scratch-render-fonts": "1.0.0-prerelease.20180605131737"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-eslint": "^8.1.2",
+    "babel-loader": "7.1.4",
+    "babel-preset-env": "1.6.1",
+    "eslint": "^4.14.0",
+    "eslint-config-scratch": "^5.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "json": "^9.0.6",
+    "lodash.defaultsdeep": "4.6.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.1",
+    "webpack": "^4.8.0",
+    "webpack-cli": "^2.0.15"
+  }
+}
