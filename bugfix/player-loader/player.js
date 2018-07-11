@@ -51,8 +51,6 @@ if(false) {}
 "use strict";
 
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var _classnames = __webpack_require__(5);
@@ -99,8 +97,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
 if ("production" === 'production' && (typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object') {
     // Warn before navigating away
     window.onbeforeunload = function () {
@@ -111,8 +107,7 @@ if ("production" === 'production' && (typeof window === 'undefined' ? 'undefined
 var Player = function Player(_ref) {
     var isPlayerOnly = _ref.isPlayerOnly,
         onSeeInside = _ref.onSeeInside,
-        props = _objectWithoutProperties(_ref, ['isPlayerOnly', 'onSeeInside']);
-
+        projectId = _ref.projectId;
     return _react2.default.createElement(
         _box2.default,
         {
@@ -123,16 +118,18 @@ var Player = function Player(_ref) {
             { onClick: onSeeInside },
             'See inside'
         ),
-        _react2.default.createElement(_gui2.default, _extends({
+        _react2.default.createElement(_gui2.default, {
             enableCommunity: true,
-            isPlayerOnly: isPlayerOnly
-        }, props))
+            isPlayerOnly: isPlayerOnly,
+            projectId: projectId
+        })
     );
 };
 
 Player.propTypes = {
     isPlayerOnly: _propTypes2.default.bool,
-    onSeeInside: _propTypes2.default.func
+    onSeeInside: _propTypes2.default.func,
+    projectId: _propTypes2.default.number
 };
 
 var mapStateToProps = function mapStateToProps(state) {
