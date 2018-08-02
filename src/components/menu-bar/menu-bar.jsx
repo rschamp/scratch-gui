@@ -15,7 +15,7 @@ import Menu from '../../containers/menu.jsx';
 import {MenuItem, MenuSection} from '../menu/menu.jsx';
 import ProjectSaver from '../../containers/project-saver.jsx';
 
-import {openTipsLibrary} from '../../reducers/modals';
+import {openTipsLibrary, openSettings} from '../../reducers/modals';
 import {setPlayer} from '../../reducers/mode';
 import {
     openFileMenu,
@@ -297,6 +297,15 @@ class MenuBar extends React.Component {
                                     </MenuItem>
                                 </MenuItemTooltip>
                                 <MenuSection>
+                                    <MenuItem
+                                        onClick={this.props.onClickSettings}
+                                    >
+                                        <FormattedMessage
+                                            defaultMessage="Settings"
+                                            description="Menu bar item to open the Settings modal"
+                                            id="gui.menuBar.settings"
+                                        />
+                                    </MenuItem>
                                     <MenuItemTooltip id="turbo">
                                         <MenuItem>
                                             <FormattedMessage
@@ -446,6 +455,7 @@ MenuBar.propTypes = {
     onClickEdit: PropTypes.func,
     onClickFile: PropTypes.func,
     onClickLanguage: PropTypes.func,
+    onClickSettings: PropTypes.func,
     onOpenTipLibrary: PropTypes.func,
     onRequestCloseEdit: PropTypes.func,
     onRequestCloseFile: PropTypes.func,
@@ -462,6 +472,10 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     onOpenTipLibrary: () => dispatch(openTipsLibrary()),
     onClickFile: () => dispatch(openFileMenu()),
+    onClickSettings: () => {
+        dispatch(openSettings());
+        dispatch(closeEditMenu());
+    },
     onRequestCloseFile: () => dispatch(closeFileMenu()),
     onClickEdit: () => dispatch(openEditMenu()),
     onRequestCloseEdit: () => dispatch(closeEditMenu()),

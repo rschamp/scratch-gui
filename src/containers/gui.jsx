@@ -119,6 +119,7 @@ const mapStateToProps = state => ({
         state.scratchGui.targets.stage &&
         state.scratchGui.targets.stage.id === state.scratchGui.targets.editingTarget
     ),
+    settingsVisible: state.scratchGui.modals.settings,
     soundsTabVisible: state.scratchGui.editorTab.activeTabIndex === SOUNDS_TAB_INDEX,
     tipsLibraryVisible: state.scratchGui.modals.tipsLibrary
 });

@@ -13,6 +13,7 @@ import Renderer from 'scratch-render';
 import Blocks from '../../containers/blocks.jsx';
 import CostumeTab from '../../containers/costume-tab.jsx';
 import TargetPane from '../../containers/target-pane.jsx';
+import SettingsModal from '../../containers/settings-modal.jsx';
 import SoundTab from '../../containers/sound-tab.jsx';
 import StageWrapper from '../../containers/stage-wrapper.jsx';
 import Loader from '../loader/loader.jsx';
@@ -75,6 +76,7 @@ const GUIComponent = props => {
         onSeeCommunity,
         previewInfoVisible,
         targetIsStage,
+        settingsVisible,
         soundsTabVisible,
         stageSizeMode,
         tipsLibraryVisible,
@@ -112,36 +114,39 @@ const GUIComponent = props => {
                 className={styles.pageWrapper}
                 {...componentProps}
             >
-                {previewInfoVisible ? (
-                    <PreviewModal />
-                ) : null}
-                {loading ? (
-                    <Loader />
-                ) : null}
-                {importInfoVisible ? (
-                    <ImportModal />
-                ) : null}
-                {isRendererSupported ? null : (
+                {isRendererSupported || (
                     <WebGlModal />
                 )}
-                {tipsLibraryVisible ? (
+                {loading && (
+                    <Loader />
+                )}
+                {previewInfoVisible && (
+                    <PreviewModal />
+                )}
+                {settingsVisible && (
+                    <SettingsModal />
+                )}
+                {importInfoVisible && (
+                    <ImportModal />
+                )}
+                {tipsLibraryVisible && (
                     <TipsLibrary />
-                ) : null}
-                {cardsVisible ? (
+                )}
+                {cardsVisible && (
                     <Cards />
-                ) : null}
-                {costumeLibraryVisible ? (
+                )}
+                {costumeLibraryVisible && (
                     <CostumeLibrary
                         vm={vm}
                         onRequestClose={onRequestCloseCostumeLibrary}
                     />
-                ) : null}
-                {backdropLibraryVisible ? (
+                )}
+                {backdropLibraryVisible && (
                     <BackdropLibrary
                         vm={vm}
                         onRequestClose={onRequestCloseBackdropLibrary}
                     />
-                ) : null}
+                )}
                 <MenuBar
                     enableCommunity={enableCommunity}
                     onSeeCommunity={onSeeCommunity}
@@ -292,6 +297,7 @@ GUIComponent.propTypes = {
     onSeeCommunity: PropTypes.func,
     onTabSelect: PropTypes.func,
     previewInfoVisible: PropTypes.bool,
+    settingsVisible: PropTypes.bool,
     soundsTabVisible: PropTypes.bool,
     stageSizeMode: PropTypes.oneOf(Object.keys(STAGE_SIZE_MODES)),
     targetIsStage: PropTypes.bool,

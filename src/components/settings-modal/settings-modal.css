@@ -1,0 +1,8 @@
+@import "../../css/colors.css";
+.modal-content {
+    width: 552px;
+}
+
+.body {
+    background: $ui-white;
+}
