@@ -1,51 +1,7 @@
 var GUI =
-(window["webpackJsonpGUI"] = window["webpackJsonpGUI"] || []).push([[1],{
+(window["webpackJsonpGUI"] = window["webpackJsonpGUI"] || []).push([[4],{
 
-/***/ 427:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-// imports
-
-
-// module
-exports.push([module.i, ".player_stage-only_3WHZN {\n    width: calc(480px + 1rem);\n}\n\n.player_stage-only_3WHZN * {\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n", ""]);
-
-// exports
-exports.locals = {
-	"stage-only": "player_stage-only_3WHZN",
-	"stageOnly": "player_stage-only_3WHZN"
-};
-
-/***/ }),
-
-/***/ 428:
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(427);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(3)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ 429:
+/***/ 1517:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53,7 +9,7 @@ if(false) {}
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _classnames = __webpack_require__(5);
+var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -65,31 +21,31 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(33);
+var _reactDom = __webpack_require__(34);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactRedux = __webpack_require__(7);
 
-var _box = __webpack_require__(17);
+var _box = __webpack_require__(14);
 
 var _box2 = _interopRequireDefault(_box);
 
-var _gui = __webpack_require__(154);
+var _gui = __webpack_require__(126);
 
 var _gui2 = _interopRequireDefault(_gui);
 
-var _hashParserHoc = __webpack_require__(119);
+var _hashParserHoc = __webpack_require__(168);
 
 var _hashParserHoc2 = _interopRequireDefault(_hashParserHoc);
 
-var _appStateHoc = __webpack_require__(118);
+var _appStateHoc = __webpack_require__(169);
 
 var _appStateHoc2 = _interopRequireDefault(_appStateHoc);
 
-var _mode = __webpack_require__(102);
+var _mode = __webpack_require__(118);
 
-var _player = __webpack_require__(428);
+var _player = __webpack_require__(1518);
 
 var _player2 = _interopRequireDefault(_player);
 
@@ -129,7 +85,7 @@ var Player = function Player(_ref) {
 Player.propTypes = {
     isPlayerOnly: _propTypes2.default.bool,
     onSeeInside: _propTypes2.default.func,
-    projectId: _propTypes2.default.number
+    projectId: _propTypes2.default.string
 };
 
 var mapStateToProps = function mapStateToProps(state) {
@@ -154,7 +110,51 @@ document.body.appendChild(appTarget);
 
 _reactDom2.default.render(_react2.default.createElement(WrappedPlayer, { isPlayerOnly: true }), appTarget);
 
+/***/ }),
+
+/***/ 1518:
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(1519);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(5)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ 1519:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".player_stage-only_3WHZN {\n    width: calc(480px + 1rem);\n}\n\n.player_stage-only_3WHZN * {\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"stage-only": "player_stage-only_3WHZN",
+	"stageOnly": "player_stage-only_3WHZN"
+};
+
 /***/ })
 
-},[[429,0]]]);
+},[[1517,0]]]);
 //# sourceMappingURL=player.js.map
