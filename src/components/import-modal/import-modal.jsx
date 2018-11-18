@@ -1,11 +1,12 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactModal from 'react-modal';
-import Box from '../box/box.jsx';
 import {defineMessages, injectIntl, intlShape, FormattedMessage} from 'react-intl';
-import classNames from 'classnames';
 
+import Box from '../box/box.jsx';
 import CloseButton from '../close-button/close-button.jsx';
+import {H2, P} from '../typography/typography.jsx';
 
 import styles from './import-modal.css';
 
@@ -63,9 +64,9 @@ const ImportModal = ({intl, ...props}) => (
                             styles.headerItemTitle
                         )}
                     >
-                        <h2>
+                        <H2>
                             {intl.formatMessage({...messages.title})}
-                        </h2>
+                        </H2>
                     </div>
                     <div className={classNames(styles.headerItem, styles.headerItemFilter)}>
                         {null}
@@ -74,9 +75,9 @@ const ImportModal = ({intl, ...props}) => (
             </Box>
 
             <Box className={styles.body}>
-                <p>
+                <P>
                     {intl.formatMessage({...messages.formDescription})}
-                </p>
+                </P>
                 <Box
                     className={classNames(styles.inputRow,
                         (props.hasValidationError ? styles.badInputContainer : styles.okInputContainer))
@@ -107,11 +108,11 @@ const ImportModal = ({intl, ...props}) => (
                 </Box>
                 {props.hasValidationError ?
                     <Box className={styles.errorRow}>
-                        <p>
+                        <P>
                             <FormattedMessage
                                 {...messages[`${props.errorMessage}`]}
                             />
-                        </p>
+                        </P>
                     </Box> : null
                 }
                 <Box className={styles.buttonRow}>

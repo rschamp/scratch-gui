@@ -1,2 +1,5 @@
+@import "../../css/typography.css";
+
 .box {
+    font-family: $font-family-base;
 }

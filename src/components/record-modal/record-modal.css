@@ -1,4 +1,5 @@
 @import "../../css/colors.css";
+@import "../../css/typography.css";
 @import "../../css/units.css";
 
 .modal-content {
@@ -38,7 +39,7 @@
 
 .help-text {
     margin: 10px auto 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family-base;
     color: rgb(167, 170, 181);
     font-size: 0.95rem;
     font-weight: 500;

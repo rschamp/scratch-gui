@@ -1,4 +1,5 @@
 @import "../../css/colors.css";
+@import "../../css/typography.css";
 @import "../../css/units.css";
 
 /* Position the language select over the language icon, and make it transparent */
@@ -8,7 +9,7 @@
     height: $menu-bar-height;
     opacity: 0;
     user-select: none;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family-base;
     font-size: .875rem;
     color: $text-primary;
     background: $ui-white;

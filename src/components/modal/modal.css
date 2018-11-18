@@ -1,4 +1,5 @@
 @import "../../css/colors.css";
+@import "../../css/typography.css";
 @import "../../css/units.css";
 @import "../../css/z-index.css";
 
@@ -24,7 +25,7 @@
     border-radius: $space;
     user-select: none;
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family-base;
     color: $text-primary;
     overflow: hidden;
 }
@@ -69,7 +70,7 @@ $sides: 20rem;
     width: 100%;
     background-color: $motion-primary;
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family-base;
     font-size: 1rem;
     font-weight: normal;
 }

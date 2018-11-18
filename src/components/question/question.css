@@ -1,5 +1,6 @@
-@import "../../css/units.css";
 @import "../../css/colors.css";
+@import "../../css/typography.css";
+@import "../../css/units.css";
 
 .question-container {
     margin: $space;
@@ -13,7 +14,7 @@
 .question-label {
     font-size: 0.75rem;
     font-weight: bold;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family-base;
     color: $text-primary;
     padding-bottom: $space;
 }

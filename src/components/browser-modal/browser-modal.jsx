@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactModal from 'react-modal';
-import Box from '../box/box.jsx';
 import {defineMessages, injectIntl, intlShape, FormattedMessage} from 'react-intl';
+
+import Box from '../box/box.jsx';
+import {H2, P} from '../typography/typography.jsx';
 
 import styles from './browser-modal.css';
 
@@ -26,10 +28,10 @@ const BrowserModal = ({intl, ...props}) => (
             <Box className={styles.illustration} />
 
             <Box className={styles.body}>
-                <h2>
+                <H2>
                     <FormattedMessage {...messages.label} />
-                </h2>
-                <p>
+                </H2>
+                <P>
                     { /* eslint-disable max-len */ }
                     <FormattedMessage
                         defaultMessage="We're very sorry, but Scratch 3.0 does not support Internet Explorer, Vivaldi, Opera or Silk. We recommend trying a newer browser such as Google Chrome, Mozilla Firefox, or Microsoft Edge."
@@ -37,7 +39,7 @@ const BrowserModal = ({intl, ...props}) => (
                         id="gui.unsupportedBrowser.description"
                     />
                     { /* eslint-enable max-len */ }
-                </p>
+                </P>
 
                 <Box className={styles.buttonRow}>
                     <button

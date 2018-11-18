@@ -1,5 +1,6 @@
-@import "../../css/units.css";
 @import "../../css/colors.css";
+@import "../../css/typography.css";
+@import "../../css/units.css";
 @import "../../css/z-index.css";
 
 .monitor-container {
@@ -8,7 +9,7 @@
     z-index: $z-index-monitor;
     border: 1px solid $ui-black-transparent;
     border-radius: calc($space / 2);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family-base;
     font-size: 0.75rem;
     transition: box-shadow 0.2s;
     pointer-events: all;
@@ -159,7 +160,7 @@
     color: $ui-white;
     outline: none;
     font-size: 0.75rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family-base;
     /* Workaround for Firefox */
     width: 0;
     flex: 1 1 auto;

@@ -1,5 +1,6 @@
-@import "../../css/units.css";
 @import "../../css/colors.css";
+@import "../../css/typography.css";
+@import "../../css/units.css";
 @import "../../css/z-index.css";
 
 .page-wrapper {
@@ -50,7 +51,7 @@
     align-items: flex-end;
     flex-shrink: 0;
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family-base;
     font-weight: 500;
     font-size: 0.80rem;
 

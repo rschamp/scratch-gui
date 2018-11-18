@@ -1,4 +1,5 @@
 @import "../../css/colors.css";
+@import "../../css/typography.css";
 @import "../../css/units.css";
 
 .close-button {
@@ -8,7 +9,7 @@
 
     overflow: hidden;  /* Mask the icon animation */
     border-radius: 50%;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family-base;
     user-select: none;
     cursor: pointer;
     transition: all 0.15s ease-out;

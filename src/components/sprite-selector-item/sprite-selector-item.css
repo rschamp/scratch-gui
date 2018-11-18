@@ -1,5 +1,6 @@
-@import "../../css/units.css";
 @import "../../css/colors.css";
+@import "../../css/typography.css";
+@import "../../css/units.css";
 
 /* @todo: refactor this class name, and component: `sprite-selector` to `sprite` */
 .sprite-selector-item {
@@ -8,7 +9,7 @@
     justify-content: flex-start;
     position: relative;
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family-base;
     font-size: 0.8rem;
     color: $text-primary;
     border-width: 2px;

@@ -1,4 +1,5 @@
 @import "../../css/colors.css";
+@import "../../css/typography.css";
 @import "../../css/units.css";
 @import "../../css/z-index.css";
 
@@ -18,7 +19,7 @@ $more-button-size: 2.25rem;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family-base;
     background: $motion-primary;
     outline: none;
     border: none;
@@ -137,7 +138,7 @@ button::-moz-focus-inner {
     opacity: 1 !important;
     border: 1px solid hsla(0, 0%, 0%, .1) !important;
     box-shadow: 0 0 .5rem hsla(0, 0%, 0%, .25) !important;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-family: $font-family-base !important;
 }
 
 .tooltip:after {
@@ -156,7 +157,7 @@ button::-moz-focus-inner {
     border: 1px solid hsla(0, 0%, 0%, .1) !important;
     border-radius: $form-radius !important;
     box-shadow: 0 0 .5rem hsla(0, 0%, 0%, .25) !important;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-family: $font-family-base !important;
     z-index: $z-index-tooltip !important;
 }
 

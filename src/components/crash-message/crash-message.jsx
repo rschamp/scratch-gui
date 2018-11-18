@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Box from '../box/box.jsx';
 import {FormattedMessage} from 'react-intl';
+
+import Box from '../box/box.jsx';
+import {H2, P} from '../typography/typography.jsx';
 
 import styles from './crash-message.css';
 import reloadIcon from './reload.svg';
@@ -13,14 +15,14 @@ const CrashMessage = props => (
                 className={styles.reloadIcon}
                 src={reloadIcon}
             />
-            <h2>
+            <H2>
                 <FormattedMessage
                     defaultMessage="Oops! Something went wrong."
                     description="Crash Message title"
                     id="gui.crashMessage.label"
                 />
-            </h2>
-            <p>
+            </H2>
+            <P>
                 <FormattedMessage
                     defaultMessage={'We are so sorry, but it looks like Scratch has crashed. This bug has been' +
                         ' automatically reported to the Scratch Team. Please refresh your page to try' +
@@ -28,7 +30,7 @@ const CrashMessage = props => (
                     description="Message to inform the user that page has crashed."
                     id="gui.crashMessage.description"
                 />
-            </p>
+            </P>
             <button
                 className={styles.reloadButton}
                 onClick={props.onReload}

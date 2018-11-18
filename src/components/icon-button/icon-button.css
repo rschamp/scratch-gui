@@ -1,4 +1,5 @@
 @import "../../css/colors.css";
+@import "../../css/typography.css";
 
 .container {
     display: flex;
@@ -7,7 +8,7 @@
     cursor: pointer;
     transition: 0.2s;
     font-size: 0.75rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family-base;
     color: $motion-primary;
 }
 

@@ -1,11 +1,12 @@
-@import "../../css/units.css";
 @import "../../css/colors.css";
+@import "../../css/typography.css";
+@import "../../css/units.css";
 
 .input-form {
     height: 2rem;
     padding: 0 0.75rem;
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family-base;
     font-size: 0.625rem;
     font-weight: bold;
     color: $text-primary;

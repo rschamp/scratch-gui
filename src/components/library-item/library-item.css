@@ -1,4 +1,5 @@
 @import "../../css/colors.css";
+@import "../../css/typography.css";
 @import "../../css/units.css";
 
 .library-item {
@@ -10,7 +11,7 @@
     height: 160px;
     margin: $space;
     padding: 1rem 1rem 0 1rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family-base;
     color: $text-primary;
     background: white;
     border-width: 2px;

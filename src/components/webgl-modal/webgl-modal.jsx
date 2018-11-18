@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactModal from 'react-modal';
-import Box from '../box/box.jsx';
 import {defineMessages, injectIntl, intlShape, FormattedMessage} from 'react-intl';
+
+import Box from '../box/box.jsx';
+import {H2, P} from '../typography/typography.jsx';
 
 import styles from './webgl-modal.css';
 
@@ -26,10 +28,10 @@ const WebGlModal = ({intl, ...props}) => (
             <Box className={styles.illustration} />
 
             <Box className={styles.body}>
-                <h2>
+                <H2>
                     <FormattedMessage {...messages.label} />
-                </h2>
-                <p>
+                </H2>
+                <P>
                     { /* eslint-disable max-len */ }
                     <FormattedMessage
                         defaultMessage="Unfortunately it looks like your browser or computer {webGlLink}. This technology is needed for Scratch 3.0 to run."
@@ -51,7 +53,7 @@ const WebGlModal = ({intl, ...props}) => (
                         }}
                     />
                     { /* eslint-enable max-len */ }
-                </p>
+                </P>
 
                 <Box className={styles.buttonRow}>
                     <button

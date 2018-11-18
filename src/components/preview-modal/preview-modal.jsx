@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactModal from 'react-modal';
-import Box from '../box/box.jsx';
 import {defineMessages, injectIntl, intlShape, FormattedMessage} from 'react-intl';
+
+import Box from '../box/box.jsx';
+import {H2, P} from '../typography/typography.jsx';
 
 import styles from './preview-modal.css';
 import catIcon from './happy-cat.png';
@@ -47,14 +49,14 @@ const PreviewModal = ({intl, ...props}) => (
             <Box className={styles.illustration} />
 
             <Box className={styles.body}>
-                <h2>
+                <H2>
                     <FormattedMessage
                         defaultMessage="Welcome to the Scratch 3.0 Beta"
                         description="Header for Beta Info Modal"
                         id="gui.previewInfo.betawelcome"
                     />
-                </h2>
-                <p>
+                </H2>
+                <P>
                     { /* eslint-disable max-len */ }
                     <FormattedMessage
                         defaultMessage="We're working on the next generation of Scratch. We're excited for you to try it!"
@@ -62,7 +64,7 @@ const PreviewModal = ({intl, ...props}) => (
                         id="gui.previewInfo.invitation"
                     />
                     { /* eslint-enable max-len */ }
-                </p>
+                </P>
 
                 <Box className={styles.buttonRow}>
                     <button
