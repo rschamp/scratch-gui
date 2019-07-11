@@ -2,10 +2,6 @@ import {detectLocale} from '../../../src/lib/detect-locale.js';
 
 const supportedLocales = ['en', 'es', 'pt-br', 'de', 'it'];
 
-Object.defineProperty(window.location,
-    'search',
-    {value: '?name=val', configurable: true}
-);
 Object.defineProperty(window.navigator,
     'language',
     {value: 'en-US', configurable: true}
@@ -13,42 +9,27 @@ Object.defineProperty(window.navigator,
 
 describe('detectLocale', () => {
     test('uses locale from the URL when present', () => {
-        Object.defineProperty(window.location,
-            'search',
-            {value: '?locale=pt-br'}
-        );
+        jsdom.reconfigure({url: 'http://localhost/?locale=pt-br'});
         expect(detectLocale(supportedLocales)).toEqual('pt-br');
     });
 
     test('is case insensitive', () => {
-        Object.defineProperty(window.location,
-            'search',
-            {value: '?locale=pt-BR'}
-        );
+        jsdom.reconfigure({url: 'http://localhost/?locale=pt-BR'});
         expect(detectLocale(supportedLocales)).toEqual('pt-br');
     });
 
     test('also accepts lang from the URL when present', () => {
-        Object.defineProperty(window.location,
-            'search',
-            {value: '?lang=it'}
-        );
+        jsdom.reconfigure({url: 'http://localhost/?lang=it'});
         expect(detectLocale(supportedLocales)).toEqual('it');
     });
 
     test('ignores unsupported locales', () => {
-        Object.defineProperty(window.location,
-            'search',
-            {value: '?lang=sv'}
-        );
+        jsdom.reconfigure({url: 'http://localhost/?lang=sv'});
         expect(detectLocale(supportedLocales)).toEqual('en');
     });
 
     test('ignores other parameters', () => {
-        Object.defineProperty(window.location,
-            'search',
-            {value: '?enable=language'}
-        );
+        jsdom.reconfigure({url: 'http://localhost/?enable=language'});
         expect(detectLocale(supportedLocales)).toEqual('en');
     });
 
@@ -69,18 +50,12 @@ describe('detectLocale', () => {
     });
 
     test('works with an empty locale', () => {
-        Object.defineProperty(window.location,
-            'search',
-            {value: '?locale='}
-        );
+        jsdom.reconfigure({url: 'http://localhost/?locale='});
         expect(detectLocale(supportedLocales)).toEqual('en');
     });
 
     test('if multiple, uses the first locale', () => {
-        Object.defineProperty(window.location,
-            'search',
-            {value: '?locale=de&locale=en'}
-        );
+        jsdom.reconfigure({url: 'http://localhost/?locale=de&locale=en'});
         expect(detectLocale(supportedLocales)).toEqual('de');
     });
 });

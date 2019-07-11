@@ -4,6 +4,9 @@ module.exports = {
         browser: true,
         jest: true
     },
+    globals: {
+        jsdom: true
+    },
     rules: {
         'react/prop-types': 0
     }

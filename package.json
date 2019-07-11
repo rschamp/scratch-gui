@@ -65,6 +65,8 @@
     "immutable": "3.8.2",
     "intl": "1.2.5",
     "jest": "^24.8.0",
+    "jest-environment-jsdom": "^24.8.0",
+    "jest-environment-jsdom-global": "^1.2.0",
     "js-base64": "2.5.1",
     "keymirror": "0.1.1",
     "lodash.bindall": "4.4.0",
@@ -131,6 +133,7 @@
       "raf/polyfill",
       "<rootDir>/test/helpers/enzyme-setup.js"
     ],
+    "testEnvironment": "jest-environment-jsdom-global",
     "testPathIgnorePatterns": [
       "src/test.js"
     ],
