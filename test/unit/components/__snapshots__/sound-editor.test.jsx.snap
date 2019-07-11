@@ -1,21 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sound Editor Component matches snapshot 1`] = `
-<div
-  className={undefined}
->
-  <div
-    className={undefined}
-  >
-    <div
-      className={undefined}
-    >
-      <label
-        className={undefined}
-      >
-        <span
-          className={undefined}
-        >
+<div>
+  <div>
+    <div>
+      <label>
+        <span>
           Sound
         </span>
         <input
@@ -23,35 +13,29 @@ exports[`Sound Editor Component matches snapshot 1`] = `
           onBlur={[Function]}
           onChange={[Function]}
           onKeyPress={[Function]}
-          onSubmit={[Function]}
+          onSubmit={[MockFunction]}
           tabIndex="1"
           type="text"
           value="sound name"
         />
       </label>
-      <div
-        className={undefined}
-      >
+      <div>
         <button
-          className={undefined}
           disabled={false}
-          onClick={[Function]}
+          onClick={[MockFunction]}
           title="Undo"
         >
           <img
-            className={undefined}
             draggable={false}
             src="test-file-stub"
           />
         </button>
         <button
-          className={undefined}
           disabled={true}
-          onClick={[Function]}
+          onClick={[MockFunction]}
           title="Redo"
         >
           <img
-            className={undefined}
             draggable={false}
             src="test-file-stub"
           />
@@ -60,35 +44,26 @@ exports[`Sound Editor Component matches snapshot 1`] = `
     </div>
     <div
       className="undefined"
-      onClick={[Function]}
+      onClick={[MockFunction]}
       role="button"
     >
       <img
-        className={undefined}
         draggable={false}
         src="test-file-stub"
       />
-      <div
-        className={undefined}
-      >
+      <div>
         <span>
           Save
         </span>
       </div>
     </div>
   </div>
-  <div
-    className={undefined}
-  >
-    <div
-      className={undefined}
-    >
+  <div>
+    <div>
       <svg
-        className={undefined}
         viewBox="-1 0 600 160"
       >
         <line
-          className={undefined}
           x1={-1}
           x2={600}
           y1={80}
@@ -98,16 +73,13 @@ exports[`Sound Editor Component matches snapshot 1`] = `
           transform="scale(1, -1) translate(0, -80)"
         >
           <path
-            className={undefined}
             d="M0 0Q0 0 60 40 Q120 80 180 120 Q240 160 300 200 Q360 240 420 120 Q480 0 480 0 Q480 0 420 -120 Q360 -240 300 -200 Q240 -160 180 -120 Q120 -80 60 -40 Q0 0 0 0Z"
             strokeLinejoin="round"
             strokeWidth={1}
           />
         </g>
       </svg>
-      <div
-        className={undefined}
-      >
+      <div>
         <div
           className=""
           onMouseDown={[Function]}
@@ -210,9 +182,7 @@ exports[`Sound Editor Component matches snapshot 1`] = `
             </div>
           </div>
         </div>
-        <div
-          className={undefined}
-        >
+        <div>
           <div
             className=""
             style={
@@ -331,12 +301,10 @@ exports[`Sound Editor Component matches snapshot 1`] = `
   <div
     className=""
   >
-    <div
-      className={undefined}
-    >
+    <div>
       <button
         className=""
-        onClick={[Function]}
+        onClick={[MockFunction]}
         title="Stop"
       >
         <img
@@ -347,17 +315,14 @@ exports[`Sound Editor Component matches snapshot 1`] = `
     </div>
     <div
       className=""
-      onClick={[Function]}
+      onClick={[MockFunction]}
       role="button"
     >
       <img
-        className={undefined}
         draggable={false}
         src="test-file-stub"
       />
-      <div
-        className={undefined}
-      >
+      <div>
         <span>
           Faster
         </span>
@@ -365,17 +330,14 @@ exports[`Sound Editor Component matches snapshot 1`] = `
     </div>
     <div
       className=""
-      onClick={[Function]}
+      onClick={[MockFunction]}
       role="button"
     >
       <img
-        className={undefined}
         draggable={false}
         src="test-file-stub"
       />
-      <div
-        className={undefined}
-      >
+      <div>
         <span>
           Slower
         </span>
@@ -383,17 +345,14 @@ exports[`Sound Editor Component matches snapshot 1`] = `
     </div>
     <div
       className=""
-      onClick={[Function]}
+      onClick={[MockFunction]}
       role="button"
     >
       <img
-        className={undefined}
         draggable={false}
         src="test-file-stub"
       />
-      <div
-        className={undefined}
-      >
+      <div>
         <span>
           Echo
         </span>
@@ -401,17 +360,14 @@ exports[`Sound Editor Component matches snapshot 1`] = `
     </div>
     <div
       className=""
-      onClick={[Function]}
+      onClick={[MockFunction]}
       role="button"
     >
       <img
-        className={undefined}
         draggable={false}
         src="test-file-stub"
       />
-      <div
-        className={undefined}
-      >
+      <div>
         <span>
           Robot
         </span>
@@ -419,17 +375,14 @@ exports[`Sound Editor Component matches snapshot 1`] = `
     </div>
     <div
       className=""
-      onClick={[Function]}
+      onClick={[MockFunction]}
       role="button"
     >
       <img
-        className={undefined}
         draggable={false}
         src="test-file-stub"
       />
-      <div
-        className={undefined}
-      >
+      <div>
         <span>
           Louder
         </span>
@@ -437,17 +390,14 @@ exports[`Sound Editor Component matches snapshot 1`] = `
     </div>
     <div
       className=""
-      onClick={[Function]}
+      onClick={[MockFunction]}
       role="button"
     >
       <img
-        className={undefined}
         draggable={false}
         src="test-file-stub"
       />
-      <div
-        className={undefined}
-      >
+      <div>
         <span>
           Softer
         </span>
@@ -455,17 +405,14 @@ exports[`Sound Editor Component matches snapshot 1`] = `
     </div>
     <div
       className=""
-      onClick={[Function]}
+      onClick={[MockFunction]}
       role="button"
     >
       <img
-        className={undefined}
         draggable={false}
         src="test-file-stub"
       />
-      <div
-        className={undefined}
-      >
+      <div>
         <span>
           Reverse
         </span>
