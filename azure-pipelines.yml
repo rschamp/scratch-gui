@@ -2,7 +2,6 @@ pool:
   vmImage: 'ubuntu-16.04'
 variables:
   CHROMEDRIVER_VERSION: LATEST
-  NODE_ENV: production
   NODE_OPTIONS: --max-old-space-size=8000
   NPM_TAG: latest
 
@@ -11,8 +10,12 @@ steps:
   inputs:
     versionSpec: '8'
   displayName: 'Install Node.js'
-
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    command: ci
+- task: Npm@1
+  displayName: 'npm test'
+  inputs:
+    command: custom
+    customCommand: test
