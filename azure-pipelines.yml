@@ -15,7 +15,12 @@ steps:
   inputs:
     command: ci
 - task: Npm@1
-  displayName: 'npm test'
+  displayName: 'npm run build'
   inputs:
     command: custom
-    customCommand: test
+    customCommand: run build
+- task: Npm@1
+  displayName: 'npm run test:integration'
+  inputs:
+    command: custom
+    customCommand: run test:integration
