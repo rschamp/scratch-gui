@@ -39,3 +39,19 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFiles: test-results/**/results.xml
+- task: CopyFiles@2
+  inputs:
+    contents: build/**
+    targetFolder: $(Build.ArtifactStagingDirectory)
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: build
+- task: CopyFiles@2
+  inputs:
+    contents: dist/**
+    targetFolder: $(Build.ArtifactStagingDirectory)
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: dist
