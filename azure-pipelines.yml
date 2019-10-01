@@ -4,6 +4,8 @@ variables:
   CHROMEDRIVER_VERSION: LATEST
   NODE_OPTIONS: --max-old-space-size=8000
   NPM_TAG: latest
+  JEST_JUNIT_OUTPUT_NAME: results.xml
+  JEST_JUNIT_OUTPUT_DIR: test-results/unit
 
 steps:
 - task: NodeTool@0
@@ -15,6 +17,16 @@ steps:
   inputs:
     command: ci
 - task: Npm@1
+  displayName: 'npm run test:lint'
+  inputs:
+    command: custom
+    customCommand: run test:lint -- --quiet --output-file test-results/eslint/results.xml --format junit
+- task: Npm@1
+  displayName: 'npm run test:unit'
+  inputs:
+    command: custom
+    customCommand: run test:unit -- --reporters="default" --reporters="jest-junit" --coverage --coverageReporters=text --coverageReporters=lcov
+- task: Npm@1
   displayName: 'npm run build'
   inputs:
     command: custom
@@ -24,3 +36,6 @@ steps:
   inputs:
     command: custom
     customCommand: run test:integration
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: test-results/**/results.xml
