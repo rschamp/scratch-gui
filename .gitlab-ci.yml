@@ -2,17 +2,23 @@ default:
   image: circleci/node:8.16-browsers
 before_script:
 - npm ci
+stages:
+- build-and-tests-other-than-integration
+- integration-tests
 lint:
   script: npm run test:lint
+  stage: build-and-tests-other-than-integration
 unit:
   script: npm run test:unit
+  stage: build-and-tests-other-than-integration
 build:
   script: npm run build
-  stage: build
+  stage: build-and-tests-other-than-integration
   artifacts:
     paths:
     - build/
 integration:
   script: npm run test:integration
+  stage: integration-tests
   dependencies:
     - build
